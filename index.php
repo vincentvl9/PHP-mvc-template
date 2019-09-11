@@ -14,12 +14,12 @@
 
 <body>
   <?php
-  require_once 'controller\TemplateController.php';
+  require_once 'controller/TemplateController.php';
   // Header
   require 'view/header.php';
 
   // Content
-  $controller = new ProductsController();
+  $controller = new TemplatesController();
   $controller->handleRequest();
   ?>
 </body>

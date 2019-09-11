@@ -1,5 +1,6 @@
 <?php
 require_once 'model/TemplateLogic.php';
+require_once 'model/TemplateTwoLogic.php';
 require_once 'model/HtmlModel.php';
 
 class TemplatesController

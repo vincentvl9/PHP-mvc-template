@@ -1,9 +1,8 @@
 <?php
 require_once 'model/DataHandler.php';
 
-class TemplateLogic
+class TemplateTwoLogic
 {
-
   public function __construct()
   {
     $this->DataHandler = new DataHandler("localhost", "mysql", "test", "root", "");

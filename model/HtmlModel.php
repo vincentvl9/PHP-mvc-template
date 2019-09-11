@@ -1,5 +1,5 @@
 <?php
-class HtmlController
+class HtmlModel
 {
   public function __construct()
   { }
