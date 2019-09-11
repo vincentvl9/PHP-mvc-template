@@ -17,9 +17,12 @@
   require_once 'controller/TemplateController.php';
   // Header
   require 'view/header.php';
+  require 'view/template.php';
+
 
   // Content
   $controller = new TemplatesController();
+  
   $controller->handleRequest();
   ?>
 </body>

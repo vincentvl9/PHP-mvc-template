@@ -29,13 +29,16 @@ class TemplateTwoLogic
     return $result;
   }
 
-  public function searchTemplate($search)
+  public function searchTemplate()
   {
-    $search_value = $search["search"];
-    $sql = "SELECT * FROM Templates WHERE Template_name LIKE '%$search_value%' OR other_Template_details LIKE '%$search_value%'";
-    $result = $this->DataHandler->searchData($sql);
+    //$search_value = $search["search"];
+    //$sql = "SELECT * FROM Templates WHERE Template_name LIKE '%$search_value%' OR other_Template_details LIKE '%$search_value%'";
+    //$result = $this->DataHandler->searchData($sql);
     // $result = $this->DataHandler->readsData($sql);
-    return $result;
+    //return $result;
+
+    $result2 = 'Hello from TemplateLogicTwo!<br />';
+    return $result2;
   }
 
   public function readTemplate($id)

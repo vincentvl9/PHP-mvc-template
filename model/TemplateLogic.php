@@ -30,11 +30,13 @@ class TemplateLogic
     return $result;
   }
 
-  public function searchTemplate($search)
+  public function searchTemplate()
   {
-    $search_value = $search["search"];
-    $sql = "SELECT * FROM Templates WHERE Template_name LIKE '%$search_value%' OR other_Template_details LIKE '%$search_value%'";
-    $result = $this->DataHandler->searchData($sql);
+    
+    $result = 'Hello from TemplateLogic! <br />';
+    //$search["search"]
+    //$sql = "SELECT * FROM Templates WHERE Template_name LIKE '%$search_value%' OR other_Template_details LIKE '%$search_value%'";
+    //$result = $this->DataHandler->searchData($sql);
     // $result = $this->DataHandler->readsData($sql);
     return $result;
   }

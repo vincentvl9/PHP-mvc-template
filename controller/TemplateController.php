@@ -8,6 +8,7 @@ class TemplatesController
 	public function __construct()
 	{
 		$this->TemplateLogic = new TemplateLogic();
+		$this->TemplateTwoLogic = new TemplateTwoLogic();
 		$this->HtmlModel = new HtmlModel();
 	}
 
@@ -22,7 +23,7 @@ class TemplatesController
 					$this->collectCreateTemplateForm();
 					break;
 				case 'search':
-					$this->collectSearchTemplate();
+					$this->collectSearchTemplate($result,$result2);
 					break;
 				case 'createTemplate':
 					$this->collectCreateTemplate();
@@ -56,13 +57,17 @@ class TemplatesController
 		// $TemplateDetails = $this->TemplatesLogic->readTemplate($id);
 		// include 'view/TemplateDetail.php';
 	}
-	public function collectSearchTemplate()
+	public function collectSearchTemplate($result,$result2)
 	{
-		// $search = $_REQUEST;
-		// $Templates = $this->TemplatesLogic->searchTemplate($search);
-		// $TemplatesSearch = $this->htmlController->search();
-		// $TemplatesTable = $this->htmlController->createTable($Templates);
-		// include 'view/Template.php';
+		//$search = $_REQUEST;
+		//$Templates = $this->TemplatesLogic->searchTemplate($search);
+		//$TemplatesSearch = $this->htmlController->search();
+		//$TemplatesTable = $this->htmlController->createTable($Templates);
+		$TemplateOne = $this->TemplateLogic->searchTemplate($result);
+		$TemplateTwo = $this->TemplateTwoLogic->searchTemplate($result2);
+
+		$test = $TemplateOne + $TemplateTwo;
+		include 'view/template.php';
 	}
 
 	public function collectReadTemplates()
